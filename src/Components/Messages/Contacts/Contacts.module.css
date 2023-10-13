@@ -1,0 +1,20 @@
+.contact {
+    height: 35px;
+    margin: 10px 10px;
+
+    border: 2px #ebebec solid;
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.contacts {
+    width: 30%;
+    height: 452px;
+    margin-top: 10px;
+    border-radius: 25px;
+
+    background-color: #ffffff;
+}

@@ -1,0 +1,76 @@
+.leftBar {
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.newFeeds {
+    border-radius: 25px;
+
+    background-color: #ffffff;
+    padding: 10px 10px;
+
+    font-weight: 600;
+    font-size: 12px;
+    color: #adb5bd;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 16px 0;
+}
+
+.newFeed {
+    width: 200px;
+    height: 54px;
+
+    padding: 12px 15px;
+}
+
+.newFeed a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.title {
+    font-size: 12px;
+    padding-left: 25px;
+    margin-bottom: 5px;
+}
+
+.active {
+    color: black;
+}
+
+.backOfIcon {
+    width: 45px;
+    height: 45px;
+    margin-right: 15px;
+    border-radius: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blue {
+    background-color: #242db3;
+}
+
+.red {
+    background-color: #ff4836;
+}
+
+.yellow {
+    background-color: #f5c55e;
+}
+
+.vinous {
+    background-color: #ff2b3c;
+}
+
+.blue2 {
+    background-color: #183ff7;
+}
