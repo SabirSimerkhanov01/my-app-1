@@ -1,0 +1,41 @@
+.about {
+    margin: 10px 10px;
+    border-radius: 25px;
+    border: 2px #ebebec solid;
+}
+
+.side {
+    margin: 10px 10px;
+    min-height: 200px;
+    background-color: aqua;
+    border-radius: 25px;
+}
+
+.inicial {
+    max-width: 300px;
+
+    margin-left: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    bottom: 50px;
+    left: 25px;
+}
+
+.img {
+    height: 100px;
+    width: 100px;
+
+    border-radius: 100%;
+    border: 5px #ebebec solid;
+    background-color:brown;
+}
+
+.names {
+    margin-top: 35px;
+    margin-left: 10px;
+}
