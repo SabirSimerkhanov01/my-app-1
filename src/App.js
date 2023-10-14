@@ -11,29 +11,36 @@ import Profile from "./Components/Profile/Profile";
 function App(props) {
   return (
     <BrowserRouter>
-
       <div className="body">
         <Header />
         <main className="main">
           <LeftBar />
 
-        {/*
+          {/*
         Сами компоненты, которые находятся в <Routes></Routes>
         переключаются через lefbar, оттуда идёт "сигнал" в App.js,
         и App.js открывает необходимую компоненту.
-        */
-        }
+        */}
 
           <Routes>
-            <Route path="/profile" element={ <Profile data={props.data} /> }></Route>
+            <Route
+              path="/profile"
+              element={<Profile profile={props.state.profile} />}
+            ></Route>
             <Route path="/newsfeed" Component={NewFeeds}></Route>
             <Route path="/friends" Component={Friends}></Route>
-            <Route path="/messages/*" element={ <Messages data={props.data} /> }></Route>
+            <Route
+              path="/messages/*"
+              element={
+                <Messages
+                  dialogs={props.state.dialogs}
+                  contacts={props.state.contacts}
+                />
+              }
+            ></Route>
           </Routes>
-
         </main>
       </div>
-
     </BrowserRouter>
   );
 }

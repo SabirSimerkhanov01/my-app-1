@@ -1,15 +1,15 @@
 import React from "react";
 import Contacts from "./Contacts/Contacts";
-import Dialog from './Dialog/Dialog';
+import Dialogs from './Dialogs/Dialogs';
 import s from "./Messages.module.css";
 
-const renderDialog = (data) => data.map( el => <Dialog message={el.message} /> );
+const renderDialog = (data) => data.map( el => <Dialogs message={el.message} /> );
 
 const renderContacts = (data) => data.map( el => <Contacts img={el.img} id={el.id} name={el.name} /> )
 
 const Messages = (props) => {
-  const dialogData = renderDialog(props.data.dialogData);
-  const contactsData = renderContacts(props.data.contactsData);
+  const dialogData = renderDialog(props.dialogs);
+  const contactsData = renderContacts(props.contacts);
 
   return (
     <div className={s.messages}>
