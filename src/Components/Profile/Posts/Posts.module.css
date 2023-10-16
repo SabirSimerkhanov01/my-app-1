@@ -1,0 +1,12 @@
+.posts {
+    padding: 10px 25px;
+    border: 2px #ebebec solid;
+
+    width: 30%;
+    
+    border-radius: 25px;
+}
+
+.date {
+    font-size: 10px;
+}

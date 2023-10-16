@@ -25,7 +25,12 @@ function App(props) {
           <Routes>
             <Route
               path="/profile"
-              element={<Profile profile={props.state.profile} />}
+              element={
+                <Profile
+                  profile={props.state.profile}
+                  dispatch={props.dispatch}
+                />
+              }
             ></Route>
             <Route path="/newsfeed" Component={NewFeeds}></Route>
             <Route path="/friends" Component={Friends}></Route>

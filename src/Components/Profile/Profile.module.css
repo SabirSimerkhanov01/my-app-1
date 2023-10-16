@@ -1,9 +1,36 @@
 .profile {
     margin-top: 10px;
+    padding: 10px 20px;
     background-color: #ffffff;
 
     border-radius: 25px;
 
     width: 100%;
-    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.textarea {
+    border: 2px #ebebec solid;
+    padding: 10px 10px;
+    border-radius: 25px;
+    width: 30%;
+    resize: none;
+}
+
+.posts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+button {
+    width: 50px;
+    height: 25px;
+    border-radius: 25px;
+    border: 2px #ebebec solid;
+    background-color: brown;
 }

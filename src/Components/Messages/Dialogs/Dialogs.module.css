@@ -1,8 +1,14 @@
 .dialog {
     margin: 10px 10px;
 
-    text-align: left;
-
     border: 2px #ebebec solid;
     border-radius: 25px;
+}
+
+.my {
+    text-align: right;
+}
+
+.other {
+    text-align: left;
 }

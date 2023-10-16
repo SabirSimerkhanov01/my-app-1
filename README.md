@@ -1,7 +1,3 @@
-# В чем особенность проекта?
-
-Этот проект в основном для понимания структуры React. Здесь большее внимание уделяется структуре, чем верстке.
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

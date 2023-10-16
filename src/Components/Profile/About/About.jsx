@@ -3,7 +3,6 @@ import s from './About.module.css';
 
 
 const About = (props) => {
-
     return (
         <div className={s.about}>
             <div className={s.side}></div>
