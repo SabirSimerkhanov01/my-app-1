@@ -2,58 +2,53 @@ import React from "react";
 import s from "./Profile.module.css";
 import Posts from "./Posts/Posts";
 import About from "./About/About";
+import { changeValuePost, addPost } from "../../Redux/profileReducer";
+
+// Отрисовка about
+const aboutData = (data) =>
+  data.map((el) => <About name={el.name} surname={el.surname} />);
+
+// Отрисовка Posts
+const postsData = (data) =>
+  data
+    .slice()
+    .reverse()
+    .map((el) => (
+      <Posts date={el.date} time={el.time} id={el.id} post={el.post} />
+    ));
 
 const Profile = (props) => {
-  // Отрисовка. Через map, ничего сложного.
-  const aboutData = (data) =>
-    data.map((el) => <About name={el.name} surname={el.surname} />);
-  const postsData = (data) =>
-    data.slice().reverse().map((el) => <Posts date={el.date} time={el.time} id={el.id} post={el.post} />);
+  const { profileWindow } = props;
 
-    const newPostElement = React.createRef();
+  const newPostElement = React.createRef();
 
-    const { profile } = props; 
+  let changePost = () => {
+    let text = newPostElement.current.value;
+    props.dispatch(changeValuePost(text));
+  };
 
-    let changePost = () => {
-      let text = newPostElement.current.value;
-      let action = {
-        type: "CHANGE-VALUE-POST",
-        text: text
-      };
-
-      props.dispatch(action);
-    };
-
-    let addPost = () => {
-      let action = {
-        type: "ADD-POST"
-      };
-
-      props.dispatch(action);
-    };
+  let addPosts = () => {
+    props.dispatch(addPost());
+  };
 
   return (
     <div className={s.profile}>
-      {aboutData(profile.about)}
+      {aboutData(profileWindow.about)}
 
-      <div className={s.posts}> 
-
+      <div className={s.posts}>
         <h1>Posts</h1>
         <textarea
           ref={newPostElement}
           onChange={changePost}
-          value={props.profile.valuePost}
+          value={profileWindow.valuePost}
           className={s.textarea}
         ></textarea>
-        <button onClick={ addPost }>Button</button>
+        <button onClick={addPosts}>Button</button>
 
-        { postsData(profile.posts) }
+        {postsData(profileWindow.posts)}
       </div>
     </div>
   );
-  /*
-
-  */
 };
 
 export default Profile;

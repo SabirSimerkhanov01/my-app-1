@@ -10,6 +10,8 @@
     gap: 8px;
     text-align: center;
     width: 100%;
+
+    border: 2px #ebebec solid;
 }
 
 .title {
@@ -29,13 +31,37 @@
     width: 100%;
     height: 452px;
     margin-top: 10px;
+    border: 2px #ebebec solid;
     border-radius: 25px;
 
     background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.dialogsInner {
+    border: 2px #ebebec solid;
+    border-radius: 25px;
+    margin: 10px 10px;
+    /* height: 100%; */
+
+    overflow: scroll;
+    height: 900px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .dialogs textarea {
     min-height: 50px;
     max-width: 200px;
+
     border: 2px solid black;
+    border-radius: 25px;
+    padding: 5px 15px;
+
+    resize: none;
 }

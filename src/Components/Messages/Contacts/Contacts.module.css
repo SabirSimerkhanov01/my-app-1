@@ -10,6 +10,10 @@
     gap: 8px;
 }
 
+.active {
+    color: chocolate;
+}
+
 .contacts {
     width: 30%;
     height: 452px;

@@ -18,8 +18,8 @@ function App(props) {
 
           {/*
         Сами компоненты, которые находятся в <Routes></Routes>
-        переключаются через lefbar, оттуда идёт "сигнал" в App.js,
-        и App.js открывает необходимую компоненту.
+        переключаются через lefbar, path проверяет ссылку и когда ссылка
+        становится нужной рендерит компонент
         */}
 
           <Routes>
@@ -27,8 +27,8 @@ function App(props) {
               path="/profile"
               element={
                 <Profile
-                  profile={props.state.profile}
-                  dispatch={props.dispatch}
+                profileWindow={props.state.profileWindow}
+                dispatch={props.dispatch}
                 />
               }
             ></Route>
@@ -38,8 +38,8 @@ function App(props) {
               path="/messages/*"
               element={
                 <Messages
-                  dialogs={props.state.dialogs}
-                  contacts={props.state.contacts}
+                dispatch={props.dispatch}
+                messagesWindow={props.state.messagesWindow}
                 />
               }
             ></Route>

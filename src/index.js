@@ -12,6 +12,7 @@ export const rerenderEntireTree = () => {
     <React.StrictMode>
       <App
         state={store.getState()}
+        // dispath обязательно "захардкодить" к store
         dispatch={store.dispatch.bind(store)}
       />
     </React.StrictMode>

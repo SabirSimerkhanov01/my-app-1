@@ -1,8 +1,8 @@
 .dialog {
     margin: 10px 10px;
-
     border: 2px #ebebec solid;
     border-radius: 25px;
+    width: 200px;
 }
 
 .my {
